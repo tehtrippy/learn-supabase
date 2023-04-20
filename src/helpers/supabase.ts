@@ -7,9 +7,15 @@ export const getSession = async () => {
     return { data, error }
 }
 
-export const signup = async ({ email, password }) => {
+export const signup = async ({ email, password, name, job }) => {
     const { data, error } = await supabase.auth.signUp({
-        email, password
+        email, password,
+        options: {
+            data: {
+                name,
+                job
+            }
+        }
     })
     return { data, error }
 }

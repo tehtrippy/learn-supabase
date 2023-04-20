@@ -11,12 +11,14 @@ const SignUp = () => {
   const [isConfirm, setIsConfirm] = useState<boolean>(false);
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  const [name, setName] = useState<string>("");
+  const [job, setJob] = useState<string>("");
 
   const handleSignup = async () => {
-    if (email && password) {
+    if (email && password && name && job) {
       try {
         setLoading(true);
-        await signup({ email, password });
+        await signup({ email, password, name, job });
         setIsConfirm(true);
         toast.success("Signup Successfully!");
       } catch (err) {
@@ -33,16 +35,10 @@ const SignUp = () => {
     </div>
   ) : isConfirm ? (
     <div className="flex flex-col items-center justify-center space-y-4 px-4 md:px-0 h-full w-full sm:max-w-sm mx-auto">
-      <p className="font-bold text-white text-2xl">
+      <p className="font-bold text-white text-4xl">
         Confirm your email address!
       </p>
-      <span className="text-white font-bold">Thanks you 🐸</span>
-      <button
-        className="bg-lime-500 text-white font-bold px-4 py-2"
-        onClick={() => router.reload()}
-      >
-        SIGN IN
-      </button>
+      <span className="text-white font-bold text-3xl">Thanks you!</span>
     </div>
   ) : (
     <form
@@ -63,6 +59,18 @@ const SignUp = () => {
         placeholder="Password"
         type="password"
         onChange={(e) => setPassword(e.target.value)}
+        className="px-4 py-2 w-full outline-lime-500 text-xl"
+      />
+      <input
+        placeholder="Name"
+        type="text"
+        onChange={(e) => setName(e.target.value)}
+        className="px-4 py-2 w-full outline-lime-500 text-xl"
+      />
+      <input
+        placeholder="Job"
+        type="text"
+        onChange={(e) => setJob(e.target.value)}
         className="px-4 py-2 w-full outline-lime-500 text-xl"
       />
       <div className="flex space-x-4">
