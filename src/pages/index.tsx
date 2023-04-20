@@ -3,6 +3,7 @@ import { getSession } from "../helpers/supabase";
 import SignIn from "../components/SignIn";
 import Loading from "../components/Loading";
 import Layout from "../components/Layout";
+import Todos from "../components/Todos";
 
 const IndexPage = () => {
   const [session, setSession] = useState(null);
@@ -29,7 +30,7 @@ const IndexPage = () => {
         <SignIn />
       ) : (
         <Layout>
-          <div className="text-white">hello</div>
+          <Todos className="px-6 py-10 md:px-0 max-w-5xl mx-auto" />
         </Layout>
       )}
     </div>
