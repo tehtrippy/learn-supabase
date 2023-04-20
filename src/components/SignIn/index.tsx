@@ -38,7 +38,7 @@ const SignIn = () => {
     <SignUp />
   ) : (
     <form
-      className="flex flex-col items-center justify-center space-y-4 h-full w-full max-w-sm mx-auto"
+      className="flex flex-col items-center justify-center space-y-4 px-4 md:px-0 h-full w-full sm:max-w-sm mx-auto"
       onSubmit={(e) => {
         e.preventDefault();
         handleSignIn();

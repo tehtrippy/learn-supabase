@@ -15,7 +15,7 @@ const Layout: React.FC<LayoutType> = ({ children }) => {
         </Link>
         <User />
       </nav>
-      <main className="h-">{children}</main>
+      <main>{children}</main>
     </>
   );
 };

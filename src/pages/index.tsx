@@ -26,9 +26,7 @@ const IndexPage = () => {
           <Loading />
         </div>
       ) : !session ? (
-        <div className="px-24 py-20 h-full">
-          <SignIn />
-        </div>
+        <SignIn />
       ) : (
         <Layout>
           <div className="text-white">hello</div>

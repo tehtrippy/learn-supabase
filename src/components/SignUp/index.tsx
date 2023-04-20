@@ -28,11 +28,11 @@ const SignUp = () => {
   };
 
   return loading ? (
-    <div className="flex flex-col items-center justify-center space-y-4 h-full w-full max-w-sm mx-auto">
+    <div className="flex flex-col items-center justify-center space-y-4 px-4 md:px-0 h-full w-full sm:max-w-sm mx-auto">
       <Loading />
     </div>
   ) : isConfirm ? (
-    <div className="flex flex-col items-center justify-center space-y-4 h-full w-full max-w-sm mx-auto">
+    <div className="flex flex-col items-center justify-center space-y-4 px-4 md:px-0 h-full w-full sm:max-w-sm mx-auto">
       <p className="font-bold text-white text-2xl">
         Confirm your email address!
       </p>
@@ -46,7 +46,7 @@ const SignUp = () => {
     </div>
   ) : (
     <form
-      className="flex flex-col items-center justify-center space-y-4 h-full w-full max-w-sm mx-auto"
+      className="flex flex-col items-center justify-center space-y-4 px-4 md:px-0 h-full w-full sm:max-w-sm mx-auto"
       onSubmit={() => handleSignup()}
     >
       <div className="flex items-center space-x-2">

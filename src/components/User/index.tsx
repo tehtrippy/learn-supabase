@@ -42,10 +42,12 @@ const User = ({ className }: UserType) => {
       <div className={classNames("relative text-lg", className)}>
         <Menu>
           <Menu.Button className="flex items-center space-x-2">
-            <span className="text-white font-bold text-xl">{user.email}</span>
+            <span className="hidden sm:inline text-white font-bold text-xl">
+              {user.email}
+            </span>
             <UserCircleIcon className="w-8 h-8 text-white" />
           </Menu.Button>
-          <Menu.Items className="absolute flex flex-col right-0 mt-2 bg-white py-2 rounded space-y-2 w-3/4 shadow-lg">
+          <Menu.Items className="absolute flex flex-col right-0 mt-2 bg-white py-2 rounded space-y-2 w-48 sm:w-3/4 shadow-lg">
             <Menu.Item>
               <Link
                 href="/account"
