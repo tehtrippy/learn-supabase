@@ -1,4 +1,4 @@
-# LEARN SUPABASE
+# SUPABASE TODO LIST
 
 ![image](https://user-images.githubusercontent.com/62202111/233325748-a9572c42-6bc3-4663-b973-e5b0f7ef7dd9.png)
 
