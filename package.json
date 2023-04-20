@@ -1,5 +1,5 @@
 {
-  "name": "learn-supabase",
+  "name": "supabase-todo-list",
   "version": "0.1.0",
   "private": true,
   "scripts": {
